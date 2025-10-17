@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	</head>
-	<body>
-	
-	</body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal:target {
+      display: block;
+    }
+    .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 400px;
+      border-radius: 8px;
+      position: relative;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      text-decoration: none;
+      color: #000;
+    }
+
+
+  </style>
+</head>
+<body> 
+
+  <a href="#openModal" class="btn btn-info">Sign Up</a>
+
+  <div class="modal" id="openModal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <h4>Create Account</h4>
+      <form>
+        
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" placeholder="Enter email" id="email"> 
+
+        
+          <label for="password">Password</label>
+          <input type="password" class="form-control" placeholder="Password" id="password">
+         <div class="text-danger">Your information is safe with us</div>
+
+       
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" class="form-control" placeholder="Confirm Password" id="confirmPassword">
+      
+
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
 </html>
