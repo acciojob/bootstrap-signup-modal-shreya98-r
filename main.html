@@ -7,15 +7,14 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <style>
-    /* Custom modal styles */
-    .custom-modal {
+    .modal {
       display: none;
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
       background-color: rgba(0,0,0,0.5);
     }
-    .custom-modal:target {
+    .modal:target {
       display: block;
     }
     .modal-content {
@@ -38,13 +37,12 @@
 </head>
 <body>
 
-  <!-- Sign Up button -->
-  <a href="#openModal" class="btn btn-info">Sign Up</a>
+  <!-- Sign Up button as a button -->
+  <button class="btn btn-info">Sign Up</button>
 
   <!-- Modal -->
-  <div class="custom-modal" id="openModal">
+  <div class="modal" id="openModal">
     <div class="modal-content">
-      <!-- Close button -->
       <a href="#!" class="close">&times;</a>
       <h4>Create Account</h4>
       <form onsubmit="event.preventDefault();">
@@ -58,7 +56,7 @@
         <label for="confirmPassword">Confirm Password</label>
         <input type="password" class="form-control" placeholder="Confirm Password" id="confirmPassword">
 
-        <button type="submit" class="btn btn-success submit-btn">Submit</button>
+        <button type="submit" class="btn btn-success">Submit</button>
       </form>
     </div>
   </div>
